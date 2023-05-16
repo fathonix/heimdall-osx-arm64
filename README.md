@@ -65,10 +65,10 @@ Change to the repo directory.
     cd Heimdall
 
 Switch to the latest stable version.
-At the time of writing, the latest stable version is v2.0.1.
+At the time of writing, the latest stable version is v2.0.2.
 You can check by running `git tag`.
 
-    git checkout tags/v2.0.1
+    git checkout tags/v2.0.2
 
 Run `cmake` to configure things.
 
@@ -94,7 +94,7 @@ To check that everything works, run `heimdall`.
 
 It should output like this:
 
-    Heimdall v2.0.1
+    Heimdall v2.0.2
 
     Copyright (c) 2010-2017 Benjamin Dobell, Glass Echidna
     https://www.glassechidna.com.au/
