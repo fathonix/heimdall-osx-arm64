@@ -16,26 +16,13 @@ More details can be seen below.
 
 # Installing
 
-To install Homebrew, run this command:
+With the release of heimdall-osx-arm64 2.0.2, you don't have to deal with the complexity
+of the old steps. Simply unpack the app and you're ready to go! 🥳
 
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+If you're finding the `heimdall` executable, it's located in the same directory
+as `heimdall-frontend`:
 
-Install libusb and Qt5 through Homebrew.
-
-    brew install libusb qt@5
-
-After downloading `heimdall` binary, move it to `/usr/local/bin`.
-
-You can move it by issuing this command:
-
-    sudo mv /path/to/heimdall /usr/local/bin/
-
-Extract `heimdall-frontend-x.x.x.zip` and put `heimdall-frontend.app` in `/Applications`.
-
-Before using `heimdall-frontend`, you have to set user-scope `PATH` to make sure it detects the `heimdall` binary.
-Run the below command to set the `PATH`.
-
-    sudo launchctl config user path "/usr/local/bin:$PATH"
+    /path/to/heimdall-frontend.app/Contents/MacOS
 
 # Building
 
