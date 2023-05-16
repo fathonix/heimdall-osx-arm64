@@ -1,0 +1,6 @@
+#!/bin/sh
+# Wrapper script for heimdall-frontend to detect heimdall.
+# Licensed under MIT. (c) 2023 Aldo Adirajasa Fathoni.
+
+dir="$(dirname "$0")"
+PATH="${dir}:${PATH}" "${dir}/heimdall-frontend"
