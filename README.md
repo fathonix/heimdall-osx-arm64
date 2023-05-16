@@ -26,6 +26,8 @@ as `heimdall-frontend`:
 
 # Building
 
+> **Warning** These instuctions are partly obsolete for now. Stay tuned for the new ones.
+
 Make sure you already have Homebrew and Xcode Command-Line Tools installed to simplify the process of getting the dependencies and building.
 
 To install Xcode Command-Line Tools, run this command:
@@ -139,9 +141,9 @@ Once you've done everything, you'll only get `heimdall` binary located in `/usr/
 
 # Notes
 
-* This binary does not have built-in libraries; instead it relies on libraries provided by Homebrew. Because of that, **you must not uninstall Homebrew, libusb and Qt5.** (if you use `heimdall-frontend`) **Otherwise the binary would crash.**
+* ~~This binary does not have built-in libraries; instead it relies on libraries provided by Homebrew. Because of that, **you must not uninstall Homebrew, libusb and Qt5.** (if you use `heimdall-frontend`) **Otherwise the binary would crash.**~~
 
-  I'm still thinking about building `heimdall` statically and bundling Qt5 to `heimdall-frontend`, but I haven't found a way to do it.
+  ~~I'm still thinking about building `heimdall` statically and bundling Qt5 to `heimdall-frontend`, but I haven't found a way to do it.~~
 
 * Although Heimdall repository provides a "driver" for macOS, I don't think you'll need it. I haven't got any problems so far, apart from some warnings which are fine for now. You can't even use the driver without disabling SIP or [System Integrity Protection](https://support.apple.com/en-us/HT204899) which will [prevent you from running iOS apps until you enable it](https://forums.macrumors.com/threads/if-you-disable-sip-all-you-ios-apps-will-stop-working-on-your-m1.2269661/).
 
