@@ -64,7 +64,7 @@ Run `cmake` to configure things.
     cmake . \
         -DCMAKE_BUILD_TYPE=Release \
         -DCMAKE_INSTALL_PREFIX=/usr/local \
-        -DQt5Widgets_DIR=/opt/homebrew/opt/qt5/lib/cmake/Qt5Widgets
+        -DQt5Widgets_DIR=/opt/homebrew/opt/qt@5/lib/cmake/Qt5Widgets
 
 Export `LIBRARY_PATH` environment variable pointing to Homebrew `lib` folder, to avoid linking issues.
 
