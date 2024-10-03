@@ -145,7 +145,7 @@ Once you've done everything, you'll only get `heimdall` binary located in `/usr/
 
   ~~I'm still thinking about building `heimdall` statically and bundling Qt5 to `heimdall-frontend`, but I haven't found a way to do it.~~
 
-* Although Heimdall repository provides a "driver" for macOS, I don't think you'll need it. I haven't got any problems so far, apart from some warnings which are fine for now. You can't even use the driver without disabling SIP or [System Integrity Protection](https://support.apple.com/en-us/HT204899) which will [prevent you from running iOS apps until you enable it](https://forums.macrumors.com/threads/if-you-disable-sip-all-you-ios-apps-will-stop-working-on-your-m1.2269661/).
+* Although Heimdall repository provides a "driver" for macOS, I don't think you'll need it. I haven't got any problems so far, apart from some warnings which are fine for now. ~~You can't even use the driver without disabling SIP or [System Integrity Protection](https://support.apple.com/en-us/HT204899) which will [prevent you from running iOS apps until you enable it](https://forums.macrumors.com/threads/if-you-disable-sip-all-you-ios-apps-will-stop-working-on-your-m1.2269661/).~~ [The driver](https://github.com/Benjamin-Dobell/Heimdall/tree/master/OSX) is codeless and signed so it should be able to be installed.
 
 * For those who don't know yet, **you can only do one read-write operation on Heimdall at one session**, unlike Odin. For example, if you've run `heimdall flash --no-reboot` or `heimdall print-pit --no-reboot` once, the second time would fail with errors like `ERROR: Protocol initialisation failed!`. See this [issue](https://github.com/Benjamin-Dobell/Heimdall/issues/413#issuecomment-336619935).
 
