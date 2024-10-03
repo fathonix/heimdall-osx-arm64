@@ -10,9 +10,10 @@ also I had a hard time building Heimdall on my M1 MacBook Pro.
 
 Download from [Releases section](https://github.com/fathonix/heimdall-osx-arm64/releases/latest).
 
-Even if you download a prebuilt binary, **you still have to install [Homebrew](https://brew.sh) and its dependencies.**
+~~Even if you download a prebuilt binary, **you still have to install [Homebrew](https://brew.sh) and its dependencies.**
 (except `cmake` which is only required for building).
-More details can be seen below.
+More details can be seen below.~~ Homebrew isn't needed to run the app bundle. However, the CLI binary needs libusb that
+is also included in the app bundle. You can get it too from a package manager like Homebrew.
 
 # Installing
 
