@@ -20,6 +20,11 @@ is also included in the app bundle. You can get it too from a package manager li
 With the release of heimdall-osx-arm64 2.0.2, you don't have to deal with the complexity
 of the old steps. Simply unpack the app and you're ready to go! 🥳
 
+macOS quarantine may stop you from running the app because the app isn't signed. Try right-clicking the app on Finder and
+click Open, or remove quarantine extended attributes with this command:
+
+    xattr -drs com.apple.quarantine /path/to/heimdall-frontend.app
+
 If you're finding the `heimdall` executable, it's located in the same directory
 as `heimdall-frontend`:
 
