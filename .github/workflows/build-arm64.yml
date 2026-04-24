@@ -32,11 +32,15 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: heimdall-macos-arm64
-          path: dist/*
+          path: |
+            dist/*.tar.xz
+            dist/*.sha256
 
       - name: Publish release assets
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v2
         with:
-          files: dist/*
+          files: |
+            dist/*.tar.xz
+            dist/*.sha256
           generate_release_notes: true
