@@ -1,0 +1,26 @@
+diff --git a/heimdall-frontend/source/mainwindow.cpp b/heimdall-frontend/source/mainwindow.cpp
+index 78f0a2a..7c9ea2d 100644
+--- a/heimdall-frontend/source/mainwindow.cpp
++++ b/heimdall-frontend/source/mainwindow.cpp
+@@ -204,7 +204,9 @@ bool MainWindow::IsArchive(QString path)
+ 
+ QString MainWindow::PromptFileSelection(const QString& caption, const QString& filter)
+ {
+-	QString path = QFileDialog::getOpenFileName(this, caption, lastDirectory, filter);
++	// Native file dialogs are broken on recent macOS releases with Qt.
++	QString path = QFileDialog::getOpenFileName(this, caption, lastDirectory, filter,
++		nullptr, QFileDialog::DontUseNativeDialog);
+ 
+ 	if (path != "")
+ 		lastDirectory = path.left(path.lastIndexOf('/') + 1);
+@@ -214,7 +216,9 @@ QString MainWindow::PromptFileSelection(const QString& caption, const QString& f
+ 
+ QString MainWindow::PromptFileCreation(const QString& caption, const QString& filter)
+ {
+-	QString path = QFileDialog::getSaveFileName(this, caption, lastDirectory, filter);
++	// Native file dialogs are broken on recent macOS releases with Qt.
++	QString path = QFileDialog::getSaveFileName(this, caption, lastDirectory, filter,
++		nullptr, QFileDialog::DontUseNativeDialog);
+ 
+ 	if (path != "")
+ 		lastDirectory = path.left(path.lastIndexOf('/') + 1);

@@ -15,6 +15,16 @@ Download from [Releases section](https://github.com/fathonix/heimdall-osx-arm64/
 More details can be seen below.~~ Homebrew isn't needed to run the app bundle. However, the CLI binary needs libusb that
 is also included in the app bundle. You can get it too from a package manager like Homebrew.
 
+# Automated builds
+
+This repository now carries a small patch set and a GitHub Actions workflow for
+building updated ARM64 macOS releases from [Henrik Grimler's Heimdall
+source](https://git.sr.ht/~grimler/Heimdall).
+
+The local patch in `patches/` fixes issue #5 by forcing non-native Qt file
+dialogs on recent macOS versions where the native dialog path no longer opens
+correctly.
+
 # Installing
 
 With the release of heimdall-osx-arm64 2.0.2, you don't have to deal with the complexity
